@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> Use of Javascript </title>
+<script>
+function validateForm() {
+
+    var password = document.getElementById("Password");
+    var pLength = password.value.length;
+	var name = document.forms["myForm"]["Name"].value;
+	var gender=document.forms["myForm"]["Gender"].value;
+         
+  var address= document.getElementById("Address");
+  var psrd=document.forms["myForm"]["Password"].value;
+  if (name == "") {
+    alert("Name must be filled out!");
+    return false;
+  }
+  else{
+   if(password.value=='' || pLength<=8)
+         {
+          alert('Please enter correct password');
+         }
+   }
+  }
+}
+</script>
+
+</head>
+<body>
+<form name="myForm" action="hello.html" onsubmit="return validateForm()" method="post">
+<h2><u>Personal Details</u></h2><br>
+
+<table>
+	<tr> 
+		<td><label for="Name">Name:</td>
+		<td>
+			<input type="text" id="Name" placeholder="Name" value="">
+		</td>
+	</tr>
+	
+	<tr> 
+		<td><label for="Gender">Gender:</td>
+		<td>
+			<input type="radio" id="Gender" name="gender" value="Male" checked> Male &nbsp;
+			<input type="radio" name="gender" value="female"> Female<br>
+		</td>
+	</tr>
+	
+	
+	
+	<tr> 
+		<td><label for="Address">Address:</td>
+		<td>
+			<textarea id="Address" rows="5" cols="28">  </textarea>
+		</td>
+	</tr>
+	
+	
+	<tr> 
+	
+		<td><label for="Password">Password:</td>
+		<td><input type="password" id="Password" placeholder="Password" value=""></td>
+	<tr>
+	<td></td>
+		<td><button type="submit" value="Submit">Submit</button> &nbsp;</td>
+		
+		
+</form>
+	</tr>
+</table>
+</form>
+</body>
+</html>
